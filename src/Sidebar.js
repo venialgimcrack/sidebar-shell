@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import SidebarLinks from './SidebarLinks.js';
+
 import './Sidebar.css';
 
 class Sidebar extends Component {
@@ -15,6 +17,7 @@ class Sidebar extends Component {
                 onMouseLeave={onMouseLeave}
             >
                 <p>Sidebar</p>
+                <SidebarLinks />
             </div>
         );
     }
