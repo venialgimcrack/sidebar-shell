@@ -17,7 +17,8 @@ class Sidebar extends Component {
                 onMouseLeave={onMouseLeave}
             >
                 <p>Sidebar</p>
-                <SidebarLinks />
+
+                <SidebarLinks expanded={expanded} />
             </div>
         );
     }

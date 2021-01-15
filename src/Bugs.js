@@ -1,8 +1,6 @@
-import './Content.css';
-
 function Bugs () {
     return (
-        <div className="content">
+        <div>
             <h2>Bugs</h2>
         </div>
     );

@@ -1,8 +1,6 @@
-import './Content.css';
-
 function Epics () {
     return (
-        <div className="content">
+        <div>
             <h2>Epics</h2>
         </div>
     );
