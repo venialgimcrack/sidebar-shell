@@ -6,7 +6,7 @@ class SidebarMenu extends Component {
         super();
 
         this.state = {
-            expanded: false
+            extended: false
         };
 
         this.toggle = this.toggle.bind(this);
@@ -14,13 +14,14 @@ class SidebarMenu extends Component {
 
     toggle () {
         this.setState(state => ({
-            expanded: !state.expanded
+            extended: !state.extended
         }));
     }
 
+    // TODO add icons, vary styling based on "expanded" prop
     render () {
         const { children } = this.props,
-            { expanded } = this.state;
+            { extended } = this.state;
 
         return (
             <div>
@@ -29,7 +30,7 @@ class SidebarMenu extends Component {
                 >
                     Create
                 </div>
-                { expanded ? <div className="items">{children}</div> : null }
+                { extended ? <div className="items">{children}</div> : null }
             </div>
         );
     }

@@ -8,7 +8,7 @@ function Sidebar (props) {
 
     let sidebarClasses = `sidebar ${expanded ? 'expand' : 'contract'}`;
 
-    // TODO implement & render logo and search controls
+    // TODO implement & render logo / search controls
     return (
         <div
             className={sidebarClasses}
