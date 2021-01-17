@@ -1,5 +1,6 @@
 import SidebarLinks from './SidebarLinks.js';
 import SidebarMenu from './SidebarMenu';
+import SidebarSearch from './SidebarSearch';
 
 import './Sidebar.css';
 
@@ -8,7 +9,7 @@ function Sidebar (props) {
 
     let sidebarClasses = `sidebar ${expanded ? 'expand' : 'contract'}`;
 
-    // TODO implement & render logo / search controls
+    // TODO application logo, label
     return (
         <div
             className={sidebarClasses}
@@ -17,11 +18,15 @@ function Sidebar (props) {
         >
             <p>Sidebar</p>
 
+            <SidebarSearch expanded={expanded} />
+
+            <hr />
+
             <SidebarMenu expanded={expanded}>
                 <div>Item 1</div>
                 <div>Item 2</div>
             </SidebarMenu>
-            <hr/>
+
             <SidebarLinks expanded={expanded} />
         </div>
     );
