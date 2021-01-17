@@ -1,27 +1,30 @@
-import React, { Component } from 'react';
-
 import SidebarLinks from './SidebarLinks.js';
+import SidebarMenu from './SidebarMenu';
 
 import './Sidebar.css';
 
-class Sidebar extends Component {
-    render () {
-        const { expanded, onMouseOver, onMouseLeave } = this.props;
+function Sidebar (props) {
+    const { expanded, onMouseOver, onMouseLeave } = props;
 
-        let sidebarClasses = `sidebar ${expanded ? 'expand' : 'contract'}`;
+    let sidebarClasses = `sidebar ${expanded ? 'expand' : 'contract'}`;
 
-        return (
-            <div
-                className={sidebarClasses}
-                onMouseOver={onMouseOver}
-                onMouseLeave={onMouseLeave}
-            >
-                <p>Sidebar</p>
+    // TODO implement & render logo and search controls
+    return (
+        <div
+            className={sidebarClasses}
+            onMouseOver={onMouseOver}
+            onMouseLeave={onMouseLeave}
+        >
+            <p>Sidebar</p>
 
-                <SidebarLinks expanded={expanded} />
-            </div>
-        );
-    }
+            <SidebarMenu expanded={expanded}>
+                <div>Item 1</div>
+                <div>Item 2</div>
+            </SidebarMenu>
+            <hr/>
+            <SidebarLinks expanded={expanded} />
+        </div>
+    );
 }
 
 export default Sidebar;

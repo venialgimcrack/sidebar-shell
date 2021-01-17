@@ -9,6 +9,10 @@
     flex-direction: column;
 }
 
+.sidebar hr {
+    width: 95%;
+}
+
 .expand {
     width: 240px;
     transition: width 500ms
