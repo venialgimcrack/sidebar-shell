@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import plusIcon from './plus.png';
+
 class SidebarMenu extends Component {
 
     constructor () {
@@ -18,7 +20,7 @@ class SidebarMenu extends Component {
         }));
     }
 
-    // TODO add icons, vary styling based on "expanded" prop
+    // TODO vary styling based on "expanded" prop
     render () {
         const { expanded, children } = this.props,
             { extended } = this.state;
@@ -28,7 +30,8 @@ class SidebarMenu extends Component {
                 <div
                     onClick={this.toggle}
                 >
-                    Create
+                    <img src={plusIcon} alt="Create" />
+                    { expanded ? <span class="menuLabel">Create &gt;</span> : null }
                 </div>
                 { extended && expanded ? <div>{children}</div> : null }
             </div>
