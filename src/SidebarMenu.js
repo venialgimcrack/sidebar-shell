@@ -30,7 +30,7 @@ class SidebarMenu extends Component {
                 >
                     Create
                 </div>
-                { extended ? <div className="items">{children}</div> : null }
+                { extended ? <div>{children}</div> : null }
             </div>
         );
     }
