@@ -20,17 +20,17 @@ class SidebarMenu extends Component {
 
     // TODO add icons, vary styling based on "expanded" prop
     render () {
-        const { children } = this.props,
+        const { expanded, children } = this.props,
             { extended } = this.state;
 
         return (
-            <div>
+            <div className="menu">
                 <div
                     onClick={this.toggle}
                 >
                     Create
                 </div>
-                { extended ? <div>{children}</div> : null }
+                { extended && expanded ? <div>{children}</div> : null }
             </div>
         );
     }

@@ -14,6 +14,10 @@
     width: 95%;
 }
 
+.sidebar .menu {
+    margin-bottom: 10px;
+}
+
 .expand {
     width: 240px;
     transition: width 500ms
